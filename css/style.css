@@ -1,0 +1,22 @@
+html, body {
+	background-color: #1D2124;
+}
+
+.form-colors label {
+	color: orange;
+}
+
+.form-colors a {
+	color: orange;
+	padding-left: 10px;
+	text-decoration: underline;
+}
+
+.form-colors a:hover {
+	color: orange;
+	cursor: pointer;
+}
+
+#success-div, #error-div {
+	display: none;
+}
