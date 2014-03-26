@@ -10,7 +10,9 @@ We want to explore how to create a simple HTML5 mobile application based on the 
 * Preview of the application in <a href="http://plnkr.co/edit/mSrWyzmmgOeSzCDKRWk8?p=preview" target="_blank">Plunker</a>
 
 ###Preview of the application in Plunker
-What we are going to implement can be seen and tested in <a href="http://plnkr.co/edit/mSrWyzmmgOeSzCDKRWk8?p=preview" target="_blank">Plunker</a>. In order to make it work I had to brutally copy/paste the content of the Kii Javascript SDK in a file because Plunker seems not allowing file upload.
+What we are going to implement can be seen and tested in <a href="http://plnkr.co/edit/mSrWyzmmgOeSzCDKRWk8?p=preview" target="_blank">Plunker</a> using username/password test/test or creating a new user.
+
+In order to make it work I had to brutally copy/paste the content of the Kii Javascript SDK in a file because Plunker seems not allowing file upload.
 
 ##1. Create a Kii cloud application
 First of all create a new Kii application, put the name and select the HTML5 logo. Now download the <a href="https://developer.kii.com/downloads/270/download" target="_blank">Kii Javascript SDK</a>.
