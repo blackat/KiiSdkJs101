@@ -51,6 +51,8 @@ function signin() {
 			// Print some info to the log
 			console.log("User authenticated!");
 			console.log(theUser);
+
+			hideSignForm();
 		},
 	
 		// Called on a failed authentication
@@ -64,4 +66,9 @@ function signin() {
 function resetAlert() {
 	document.getElementById('error-div').style.display = 'none';
 	document.getElementById('success-div').style.display = 'none';
+}
+
+function hideSignForm() {
+	document.getElementById('sign-form').style.display = 'none';
+	document.getElementById('authenticated').style.display = 'block';
 }

@@ -17,6 +17,16 @@ html, body {
 	cursor: pointer;
 }
 
-#success-div, #error-div {
+#success-div, #error-div, #authenticated {
 	display: none;
+}
+
+#authenticated {
+	text-align: center;
+	margin-top: 30px;
+}
+
+/* redefine the boostrap container width */
+.container {
+	width: 300px;
 }

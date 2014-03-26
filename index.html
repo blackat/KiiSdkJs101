@@ -31,7 +31,7 @@
 		<div id="error-div" class="alert alert-danger">
 			<span id="error" class="glyphicon glyphicon-alert">E</span>
 		</div>
-		<form role="form" class="form-colors">
+		<form id="sign-form" role="form" class="form-colors">
 			<div class="form-group">
 				<label for="inputUsername">Username</label>
 				<input type="text" class="form-control" id="inputUsername" placeholder="type your username">
@@ -43,6 +43,9 @@
 			<button type="button" class="btn btn-default" onclick="signin()">Sign in</button>
 			<a type="button" class="signup-link" onclick="signup()">Sign up</a>
 		</form>
+		<div id="authenticated" class="alert alert-success">
+			<span>User successfully authenticated</span>
+		</div>
 	</div>
 </body>
 </html>
