@@ -1,4 +1,4 @@
-#Kii Javascript SDK 101 (v0.1)
+#Kii Javascript SDK 101 (v0.2)
 
 We want to explore how to create a simple HTML5 mobile application based on the new Kii Javascript SDK. Basically Kii Company offers a rich cloud mobile backend to help the development of a mobile application providing some services out of the box such as user registration and login.
 
