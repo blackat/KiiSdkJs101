@@ -59,6 +59,12 @@ function signin() {
 		failure: function(theUser, errorString) {
 			// Print some info to the log
 			console.log("Error authenticating: " + errorString);
+			if (errorString === 'invalid_grant') {
+				document.getElementById('error').innerText = 'Invalid username or password';
+			} else {
+				document.getElementById('error').innerText = errorString;
+			}
+			document.getElementById('error-div').style.display = 'block';
 		}
 	})
 }
