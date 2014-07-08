@@ -64,7 +64,16 @@ Run the command
 This command will create a project named ```Kii101PhoneGap``` in the folder ```kii101phonegap```.
 
 ####Step 2 - Add project files
-Copy ```index.html```, ```index.css``` and ```index.js``` in the corresponding folder under the ```www``` from the project just created.
+Copy ```index.html```, ```index.css```, ```index.js``` and ```kiisdk.js``` in the corresponding folder under the ```www``` from the project just created.
+
+    www -
+        | - js
+             | - index.js 
+             | - kiisdk.js
+        | - css
+             | - index.css
+        |
+        index.html
 
 ####Step 3 - Add platforms
 Switch to folder ```kii101phonegap``` and add the supported platforms, for instance iOS and Android
