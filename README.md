@@ -63,13 +63,16 @@ Run the command
 
 This command will create a project named ```Kii101PhoneGap``` in the folder ```kii101phonegap```.
 
-####Step 2
+####Step 2 - Add project files
+Copy ```index.html```, ```index.css``` and ```index.js``` in the corresponding folder under the ```www``` from the project just created.
+
+####Step 3 - Add platforms
 Switch to folder ```kii101phonegap``` and add the supported platforms, for instance iOS and Android
 
     $ cordova platform add ios
     $ cordova platform add android
 
-####Step 3
+####Step 4 - Build and emulate
 Build the application and test it in each platform before added. For iOS
 
     $ cordova build ios
@@ -82,7 +85,7 @@ For Android
     $ cordova emulate android
 
 
-####Android Emulation on OSX
+#####Android Emulation on OSX
 - install android skd using homebrew
 - check packages on adroid sdk running ```android``` and install the ones you need
 - configure an adv running ```android adv``` which is the virtual device to test the app
