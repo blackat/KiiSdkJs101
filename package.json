@@ -1,0 +1,12 @@
+{
+    "name": "kii-sdk-js-101",
+    "description": "A Web Application based on kii sdk JavaScript",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "connect": "3.1.x",
+        "serve-static": "1.4.x"
+    },
+    "devDependencies": {
+    }
+}

@@ -1,4 +1,7 @@
-#Node
-node_modules
+#Intellij files
+.idea/
+*.iml
 
-.DS_Store
+#Dependency folder
+bower_components/
+node_modules/
