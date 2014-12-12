@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kii 101 Example</title>
-	
-	<!-- Boostrap CDN -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kii 101 Example</title>
 
-	<!-- page style -->
-	<link rel="stylesheet" href="../css/style.css">
-	<script type="text/javascript" src="../js/script.js"></script>
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<!-- Kii SDK -->
-	<script type="text/javascript" src="../js/kiisdk.js"></script>
-	<script type="text/javascript">
-		window.onload = function() {
-			Kii.initializeWithSite("bcd3d1d4","dd859529315abfae6bf13027bcf593df",KiiSite.US);
-		}
-	</script>
+    <!-- Page style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Kii SDK -->
+    <script type="text/javascript" src="js/kiisdk.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            Kii.initializeWithSite("bcd3d1d4", "dd859529315abfae6bf13027bcf593df", KiiSite.US);
+        }
+    </script>
 </head>
-<body>
-	<div class="container">
-		<div id="success-div" class="alert alert-success">
-			<span id="success"><span>
-		</div>
-		<div id="error-div" class="alert alert-danger">
-			<span id="error" class="glyphicon glyphicon-alert">E</span>
-		</div>
-		<form id="sign-form" role="form" class="form-colors">
-			<div class="form-group">
-				<label for="inputUsername">Username</label>
-				<input type="text" class="form-control" id="inputUsername" placeholder="type your username">
-			</div>
-			<div class="form-group">
-				<label for="inputPassword">Password</label>
-				<input type="password" class="form-control" id="inputPassword" placeholder="type your password">
-			</div>
-			<button type="button" class="btn btn-default" onclick="signin()">Sign in</button>
-			<a type="button" class="signup-link" onclick="signup()">Sign up</a>
-		</form>
-		<div id="authenticated" class="alert alert-success">
-			<span>User successfully authenticated</span>
-		</div>
-	</div>
+<body ng-app="boxApp">
+<div class="iw-outer-frame">
+    <div class="iw-middle-frame">
+        <div class="iw-content">
+            <div class="container" ng-controller="boxCtrl">
+                <header class="iw-header">
+                    <img src="img/shipping-box.png">
+
+                    <h2>Get your box</h2>
+                </header>
+                <form id="sign-form" role="form" class="form-colors" ng-hide="show">
+                    <div ng-class="messageClass" , class="iw-message">
+                        {{errorMessage}}
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUsername">Username</label>
+                        <input type="text" class="form-control" id="inputUsername" placeholder="type your username"
+                               ng-model="user.username">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="inputPassword"
+                               placeholder="type your password" ng-model="user.password">
+                    </div>
+                    <button type="button" class="btn btn-default" ng-click="login()">login</button>
+                    <a type="button" class="signup-link" ng-click="register()">register</a>
+                </form>
+                <div class="iw-table" ng-hide="!show">
+                    <div class="CSSTableGenerator">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Tracking number</td>
+                                <td>Destination</td>
+                            </tr>
+                            <tr ng-repeat="item in items">
+                                <td>{{item.id}}</td>
+                                <td>{{item.destination}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="btn btn-default iw-back-button" ng-click="back()">back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Angular -->
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
